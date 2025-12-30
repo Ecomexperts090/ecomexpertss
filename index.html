@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom Experts | Scale Your Business</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0f172a', // Midnight Navy
+                        accentBlue: '#3b82f6', // Electric Blue
+                        accentGreen: '#4ade80', // Neon Green
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for Glassmorphism & Utilities */
+        body {
+            background-color: #0f172a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #4ade80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient-btn {
+            background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        /* Hero Background Pattern */
+        .hero-bg {
+            background-image: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 glass-card transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold text-white tracking-wider">Ecom<span class="text-accentBlue">Experts</span></span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#services" class="hover:text-accentBlue transition-colors px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#testimonials" class="hover:text-accentBlue transition-colors px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                        <a href="#plans" class="hover:text-accentBlue transition-colors px-3 py-2 rounded-md text-sm font-medium">Plans</a>
+                        <a href="#contact" class="bg-accentBlue hover:bg-blue-600 text-white px-5 py-2 rounded-full transition-all text-sm font-medium">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:hidden bg-dark border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+                <a href="#plans" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Plans</a>
+                <a href="#contact" class="text-accentBlue font-bold block px-3 py-2 rounded-md text-base">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center hero-bg overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Scale Your E-commerce Business with <span class="text-gradient">Ecom Experts</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                We handle your ads, calls, and tech stack so you can focus entirely on scaling your sales and brand.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#plans" class="bg-gradient-btn text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all transform hover:-translate-y-1">
+                    Get Started
+                </a>
+                <a href="#services" class="border border-gray-600 hover:border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                    View Services
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-400 text-2xl"></i>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-accentGreen font-semibold tracking-wide uppercase text-sm">What We Do</h2>
+                <h3 class="mt-2 text-3xl leading-8 font-bold tracking-tight text-white sm:text-4xl">Our Expertise</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-facebook-f text-2xl text-blue-400 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Meta Ads</h4>
+                    <p class="text-gray-400 text-sm">High-ROI ad campaigns on Facebook & Instagram targeting your ideal customers.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                        <i class="fas fa-phone-alt text-2xl text-green-400 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Order Verification</h4>
+                    <p class="text-gray-400 text-sm">We call every order to confirm details, drastically reducing your RTO rates.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
+                        <i class="fas fa-code text-2xl text-purple-400 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Web Development</h4>
+                    <p class="text-gray-400 text-sm">Custom, lightning-fast e-commerce stores built to handle high traffic volume.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-orange-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                        <i class="fas fa-rocket text-2xl text-orange-400 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Landing Pages</h4>
+                    <p class="text-gray-400 text-sm">High-converting single product pages designed to turn visitors into buyers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-slate-900/50 relative border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h3 class="text-3xl font-bold">What Our Clients Say</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                <div class="glass-card p-6 rounded-xl relative" data-aos="zoom-in" data-aos-delay="0">
+                    <i class="fas fa-quote-left text-4xl text-gray-700 absolute top-4 left-4 -z-10"></i>
+                    <p class="text-gray-300 mb-4 italic">"My sales doubled in just one month. The RTO reduction service saved me thousands!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-500 rounded-full mr-3"></div>
+                        <div>
+                            <h5 class="font-bold text-sm">Rahul Verma</h5>
+                            <span class="text-xs text-accentBlue">Clothing Brand Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl relative" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-quote-left text-4xl text-gray-700 absolute top-4 left-4 -z-10"></i>
+                    <p class="text-gray-300 mb-4 italic">"The landing page they designed converts at 7%. Absolute game changer for my dropshipping biz."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-500 rounded-full mr-3"></div>
+                        <div>
+                            <h5 class="font-bold text-sm">Sneha Gupta</h5>
+                            <span class="text-xs text-accentBlue">Gadget Store</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl relative" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-quote-left text-4xl text-gray-700 absolute top-4 left-4 -z-10"></i>
+                    <p class="text-gray-300 mb-4 italic">"Professional, fast, and results-driven. Ecom Experts handles the tech so I can relax."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-500 rounded-full mr-3"></div>
+                        <div>
+                            <h5 class="font-bold text-sm">Amit Singh</h5>
+                            <span class="text-xs text-accentBlue">Home Decor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" id="stats-section">
+                
+                <div class="p-4" data-aos="fade-up">
+                    <div class="text-5xl font-bold text-white mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="150">0</span><span>+</span>
+                    </div>
+                    <p class="text-accentGreen uppercase tracking-wider text-sm font-semibold">Happy Clients</p>
+                </div>
+
+                <div class="p-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl font-bold text-white mb-2 flex justify-center items-center">
+                        <span>₹</span><span class="counter" data-target="100">0</span><span>L+</span>
+                    </div>
+                    <p class="text-accentBlue uppercase tracking-wider text-sm font-semibold">Ad Budget Managed</p>
+                    </div>
+
+                <div class="p-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl font-bold text-white mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="500">0</span><span>+</span>
+                    </div>
+                    <p class="text-purple-400 uppercase tracking-wider text-sm font-semibold">Websites Delivered</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accentGreen font-semibold tracking-wide uppercase text-sm">Pricing</h2>
+                <h3 class="mt-2 text-3xl font-bold text-white">Choose Your Growth Plan</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="glass-card p-6 rounded-2xl flex flex-col border-t-4 border-gray-500 hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="text-xl font-bold text-white">Meta Ads Starter</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-bold">₹2,999</span><span class="text-gray-400">/mo</span>
+                    </div>
+                    <ul class="mb-6 space-y-3 flex-1">
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Ad Account Setup</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Audience Targeting</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Weekly Reports</li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-gray-700 hover:bg-gray-600 py-2 rounded-lg transition-colors">Select</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col border-t-4 border-purple-500 hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-white">Tech & Dev</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-bold">₹5,999</span><span class="text-gray-400">/once</span>
+                    </div>
+                    <ul class="mb-6 space-y-3 flex-1">
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Free Domain Name</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Fully Responsive</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> SEO Ready Setup</li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-gray-700 hover:bg-gray-600 py-2 rounded-lg transition-colors">Select</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col border-t-4 border-accentGreen hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-white">Operations</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-bold">₹1,499</span><span class="text-gray-400">/mo</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-2">+ ₹4 per order/call</p>
+                    <ul class="mb-6 space-y-3 flex-1">
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Order Confirmation</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Reduce RTO</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Daily Status Sheet</li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-gray-700 hover:bg-gray-600 py-2 rounded-lg transition-colors">Select</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col border-2 border-accentBlue relative transform scale-105 shadow-xl shadow-blue-900/20" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 bg-accentBlue text-white text-xs px-2 py-1 rounded-bl-lg rounded-tr-lg font-bold">POPULAR</div>
+                    <h3 class="text-xl font-bold text-white">Landing Page</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-bold text-accentBlue">₹1,999</span><span class="text-gray-400">/once</span>
+                    </div>
+                    <ul class="mb-6 space-y-3 flex-1">
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Free Domain Name</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> High Conv. Design</li>
+                        <li class="text-sm text-gray-300 flex"><i class="fas fa-check text-green-500 mr-2"></i> Fast Loading</li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-accentBlue hover:bg-blue-600 text-white font-bold py-2 rounded-lg transition-colors">Select</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-2xl font-bold text-white">Ecom<span class="text-accentBlue">Experts</span></span>
+                    <p class="text-gray-400 mt-4 text-sm">Helping you build, scale, and manage your e-commerce business with technology and expertise.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-accentBlue">Services</a></li>
+                        <li><a href="#plans" class="hover:text-accentBlue">Pricing</a></li>
+                        <li><a href="#testimonials" class="hover:text-accentBlue">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> hello@ecomexperts.in</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i> +91 98765 43210</li>
+                        <li class="flex items-center gap-4 mt-4 text-lg">
+                            <a href="#" class="hover:text-accentBlue"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-accentBlue"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="hover:text-accentBlue"><i class="fab fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                &copy; 2025 Ecom Experts. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // 1. Initialize AOS (Animate On Scroll)
+        AOS.init({
+            once: true, // Animation only happens once
+            offset: 100, // Trigger offset
+            duration: 800, // Animation duration
+            easing: 'ease-out-cubic',
+        });
+
+        // 2. Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // 3. Counter Up Animation Logic (Intersection Observer)
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    
+                    // Lower increment for smooth animation
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Create an Observer to trigger animation only when section is visible
+        const statsSection = document.getElementById('stats-section');
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(statsSection); // Stop observing after animation runs
+            }
+        }, {
+            root: null,
+            threshold: 0.4, // Trigger when 40% of the section is visible
+        });
+
+        observer.observe(statsSection);
+
+    </script>
+</body>
+</html>
